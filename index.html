@@ -461,7 +461,7 @@ $("acct").onclick=function(){user?$("mine").scrollIntoView():openAuth(null)};
 $("so").onclick=function(){user=null;guest=false;lsSet("sanad-user",null);renderAuth()};
 /* donate gate, receipt sync, lookup */
 var n1o=$("n1").onclick;
-  G.API_URL = "https://script.google.com/macros/s/AKfycbykOop3NgCT8mSXKTJdNJG8MdPRO5u8EYQuH4uecXnS8YXg7zX-mOcn5M8nxHIDgtdf/exec";
+  G.API_URL = "https://script.google.com/macros/s/AKfycbxytykhqFooKr87z63SS34yTe24XWN0tTIbZHNTh7c/dev";
 function nextStep(){n1o();if(step==2){code="SND-"+(Math.random().toString(36)+"000000").slice(2,8).toUpperCase();$("code").textContent=code;$("rform").classList.remove("hide");$("rdone").classList.add("hide");$("tx").value="";$("fl").value=""}}
 $("n1").onclick=function(){if(!user&&!guest){openAuth(nextStep);return}nextStep()};
 $("n3").addEventListener("click",function(){if(!$("rform").classList.contains("hide"))return;var l=D[D.length-1];if(user)l.email=user.email;
