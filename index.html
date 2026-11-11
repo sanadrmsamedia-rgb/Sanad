@@ -219,6 +219,7 @@ textarea:focus{border-color:var(--rose);outline:0;box-shadow:0 0 0 4px rgba(223,
 @media (max-width:760px){.r1row{grid-template-columns:1fr;gap:4px}.r1row b{text-align:start}}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 #tiers, [data-i18n="ih"], [data-i18n="in"] { display: none !important; }
+ .gfm{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-inline-start:6px solid var(--violet);border-radius:18px;padding:18px 22px;max-width:640px;margin:0 0 18px}.gfm b{display:block;font-size:17px;margin-bottom:4px}.gfm span{color:var(--muted)}.gfm.hide{display:none}
 </style>
 
 
@@ -286,6 +287,7 @@ textarea:focus{border-color:var(--rose);outline:0;box-shadow:0 0 0 4px rgba(223,
 <section id="donate" class="pane">
   <h2 data-i18n="dh"></h2>
   <p class="note" data-i18n="dn"></p>
+ <div class="gfm" id="gfm"><div><b data-i18n="gfmh"></b><span data-i18n="gfmt"></span></div><a class="btn" id="gfmb" href="#" target="_blank" rel="noopener noreferrer" data-i18n="gfmb"></a></div>
   <div class="panel">
     <div id="needbanner" class="needbanner hide"><span id="needbtxt"></span><button class="btn alt sm" id="needclr" type="button" data-i18n="nedclr"></button></div>
     <ol class="steps" id="steps"></ol>
@@ -606,6 +608,7 @@ var CONFIG={
   {en:"Fawry",ar:"فوري",account:"51558221",holder:"الاء علي عبود"}
  ],
  EMAIL:"sanad.rmsa.media@gmail.com",
+ GOFUNDME:"https://www.gofundme.com/f/help-medical-students-in-the-sudan-war-sanad-initiative",
  PHONE:"+249968366586",              /* contact phone and WhatsApp */            /* contact email for donors abroad */
  ONE_TIME:[10000,25000,50000,100000], /* one-time amount buttons in SDG (keep 4) */
  MONTHLY:[5000,10000,25000,50000],    /* monthly plans in SDG (keep 4) */
@@ -725,6 +728,9 @@ $("gcb").onclick=function(){var v=+$("gcust").value;if(!(v>=1000)){$("gcerr").te
 var ap2=apply;apply=function(){ap2();renderReg()};
 TIERS=CONFIG.ONE_TIME;cur.amt=TIERS[1]||TIERS[0];GP=[CONFIG.MONTHLY,CONFIG.YEARLY];
 ["en","ar"].forEach(function(l){TX[l].abroad=TX[l].abroad.replace("sanad.rmsa.media@gmail.com",CONFIG.EMAIL)});
+ Object.assign(TX.en,{gfmh:"Donating from outside Sudan?",gfmt:"Give securely by card on our GoFundMe page. No transfer or receipt needed.",gfmb:"Donate on GoFundMe"});
+Object.assign(TX.ar,{gfmh:"تتبرع من خارج السودان؟",gfmt:"تبرّع بأمان عبر البطاقة من صفحتنا على GoFundMe. لا حاجة لتحويل أو إيصال.",gfmb:"تبرّع عبر GoFundMe"});
+if(CONFIG.GOFUNDME){$("gfmb").href=CONFIG.GOFUNDME}else{$("gfm").classList.add("hide")}
 Object.assign(TX.en,{navt:["Home","How it helps","Donate","Give regularly","Upload receipt","Charts","Track","Ledger"],navmine:"My donations"});
 Object.assign(TX.ar,{navt:["الرئيسية","أثر تبرعك","تبرع","تبرع بانتظام","رفع الإيصال","الإحصاءات","تتبع","السجل"],navmine:"تبرعاتي"});
 var TABS={home:["home","needs","stu"],donate:["donate","regular","receipt"],impact:["impact","charts","round1","ledger"],news:["news","committee"],track:["track"],faq:["faq"],mine:["mine"],admin:["admin"]},TABN=["home","donate","impact","news","track","faq"],tabNow="home";
