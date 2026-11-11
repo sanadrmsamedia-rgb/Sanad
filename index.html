@@ -526,7 +526,7 @@ th:"Track your donation",tn:"Enter the code from your transfer note.",ql:"Donati
 ver:"Verified",pen:"Under review",lh:"Donation ledger",ln:"Every donation, shown by code and donor initials. Monthly spending reports will be posted here.",cols:["Code","Donor","Country","Amount","Status"],
 raised:"raised",stud:"students supported",ctry:"countries",to:"Area",pending:"We are checking your transfer. Updates will appear here once it is verified.",
 of:"{a} of {b}",foot:"Sanad, by the Ribat Medical Students Association. Student identities are never published."},
-ar:{org:"جمعية رباط لطلاب الطب",h1:"ندعم طالب الطب ليواصل دراسته",lead:"سند مبادرة من جمعية رباط لطلاب الطب. تدفع الرسوم الدراسية ليتمكن طلاب الطب من إكمال دراستهم.",cta1:"تبرع الآن",cta2:"تابع تبرعي",
+ar:{org:"طلاب كلية الطب بجامعة الرباط الوطني",h1:"ندعم طالب الطب ليواصل دراسته",lead:"سند مبادرة من رابطة طلاب كلية الطب بجامعة الرباط الوطني. تدفع الرسوم الدراسية ليتمكن طلاب الطب من إكمال دراستهم.",cta1:"تبرع الآن",cta2:"تابع تبرعي",
 ih:"كيف يصنع تبرعك فرقاً",in:"اختر مبلغاً لتعرف ما يدعمه. لا ننشر أسماء الطلاب ولا صورهم ولا قصصهم الشخصية.",wh:"هدفنا للرسوم الدراسية",
 tiers:["جزء صغير من الرسوم الدراسية لطالب واحد","نحو عُشر رسوم فصل دراسي لطالب واحد","نحو ربع رسوم فصل دراسي لطالب واحد","نحو نصف رسوم فصل دراسي لطالب واحد"],
 areas:["الرسوم الدراسية"],any:"الرسوم الدراسية",
@@ -538,7 +538,7 @@ e1:"أدخل مبلغاً لا يقل عن 1,000 جنيه.",e3:"أضف رمز ا
 th:"تابع تبرعك",tn:"أدخل الرمز المكتوب في ملاحظة التحويل.",ql:"رمز التبرع",find:"بحث",nf:"لم نجد هذا الرمز. أدخله كما كتبته في ملاحظة التحويل.",
 ver:"تم التحقق",pen:"قيد المراجعة",lh:"سجل التبرعات",ln:"كل تبرع يظهر برمزه وأحرف اسم المتبرع. تُنشر هنا تقارير الصرف الشهرية.",cols:["الرمز","المتبرع","الدولة","المبلغ","الحالة"],
 raised:"تم جمعها",stud:"طلاب مدعومون",ctry:"دول",to:"المجال",pending:"نراجع تحويلك الآن. ستظهر التحديثات هنا بعد التحقق منه.",
-of:"{a} من {b}",foot:"سند، مبادرة من جمعية رباط لطلاب الطب. لا تُنشر هويات الطلاب أبداً."}};
+of:"{a} من {b}",foot:"سند، مبادرة من رابطة طلاب كلية الطب جامعة الرباط الوطني. لا تُنشر هويات الطلاب أبداً."}};
 var TIERS=[10000,25000,50000,100000];
 var A=[{goal:6000000,got:3880000}];
 var C={ksa:{en:"Saudi Arabia",ar:"السعودية"},uk:{en:"United Kingdom",ar:"بريطانيا"},qa:{en:"Qatar",ar:"قطر"}};
@@ -767,7 +767,7 @@ Object.assign(TX.en,{giftq:"This is a gift in someone’s name",giftto:"Recipien
 certh:"Your gift certificate",certnote:"Your donation is verified. Save the image and share it with the person.",certdl:"Download certificate",certtitle:"Gift donation certificate",certline:"A donation for medical students’ tuition fees has been made to Sanad in the name of",certfrom:"From",certorg:"Ribat Medical Students Association",
 sth:"Students: fees paid and still waiting",stn:"Group numbers only, no names. Each circle is one student (scaled down if there are more than 100).",stpaid:"students whose fees are paid",stleft:"students still waiting",stpct:"covered"});
 Object.assign(TX.ar,{giftq:"هذا تبرع إهداء باسم شخص",giftto:"اسم المُهدى إليه",giftmsg:"رسالتك (اختياري)",giftnote:"ستظهر شهادة الإهداء في تبويب تتبع، مع هذا الرمز، بعد التحقق من تبرعك. استخدم نفس الهاتف أو الحاسوب.",
-certh:"شهادة الإهداء",certnote:"تم التحقق من تبرعك. احفظ الصورة وشاركها مع الشخص.",certdl:"تنزيل الشهادة",certtitle:"شهادة تبرع إهداء",certline:"تم التبرع لمبادرة سند لدعم الرسوم الدراسية لطلاب الطب باسم",certfrom:"من",certorg:"جمعية رباط لطلاب الطب",
+certh:"شهادة الإهداء",certnote:"تم التحقق من تبرعك. احفظ الصورة وشاركها مع الشخص.",certdl:"تنزيل الشهادة",certtitle:"شهادة تبرع إهداء",certline:"تم التبرع لمبادرة سند لدعم الرسوم الدراسية لطلاب الطب باسم",certfrom:"من",certorg:"رابطة طلاب كلية الطب جامعة الرباط الوطني",
 sth:"الطلاب: من سُددت رسومهم ومن ينتظر",stn:"أرقام جماعية فقط بلا أسماء. كل دائرة تمثل طالباً (مع تصغير النسبة إذا زاد العدد على 100).",stpaid:"طالباً سُددت رسومه",stleft:"طالباً ينتظر",stpct:"نسبة التغطية"});
 $("gift_on").onchange=function(){$("giftbox").classList.toggle("hide",!this.checked)};
 function giftNow(l){var g={to:"",msg:"",ph:"",em:""};
