@@ -842,7 +842,7 @@ function cApi(a,d){if(CONFIG.API_URL)return api(a,d);d=d||{};var c=dc(),id="x"+D
  if(a=="completeNeed")c.needs.forEach(function(x){if(x.id==d.id)x.done=!x.done});
  if(a=="saveSettings")c.settings=d.settings;
  lsSet("sanad-content",c);return Promise.resolve({ok:true})}
-function loadContent(){cApi("content").then(function(r){if(r&&r.ok){CNT={news:r.news||[],committee:r.committee||[],needs:r.needs||[]};if(r.settings&&Object.keys(r.settings).length)applySettings(r.settings);renderNews();renderCom();renderNeeds();renderAdminLists()}},function(){})}
+{CNT={news:r.news||[],committee:r.committee||[],needs:r.needs||[]};if(r.settings&&Object.keys(r.settings).length)applySettings(r.settings);renderNews();renderCom();renderNeeds();renderAdminLists()}},function(){})}
 function ordTxt(n){return t("ords")[n-1]||n}
 function renderNews(){var n=CNT.news;$("newslist").innerHTML=n.length?n.map(function(x){return'<article class="nitem">'+(okImg(x.image)?'<img src="'+esc(x.image)+'" alt="" loading="lazy">':"")+"<div><small>"+new Date(x.date).toLocaleDateString(lang=="ar"?"ar":"en")+"</small><h3>"+esc(x.title)+"</h3><p>"+esc(x.text).replace(/\n/g,"<br>")+"</p></div></article>"}).join(""):'<p class="note">'+t("nonews")+"</p>"}
 function renderCom(){var g={};CNT.committee.forEach(function(m){(g[m.round]=g[m.round]||[]).push(m)});
